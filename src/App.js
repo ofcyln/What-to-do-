@@ -9,7 +9,7 @@ import {
 
 const App = () => {
   const [items, setItems] = useState([]);
-  const [selectedItem, setSelectedItem] = useState(null);
+  const [selectedItem, setSelectedItem] = useState('');
 
   useEffect(() => {
     // Load list from localStorage on initial render
@@ -41,12 +41,26 @@ const App = () => {
     setSelectedItem(selectedItem);
   };
 
+  const onRemoveItem = (index) => {
+    const newItems = [...items];
+
+    newItems.splice(index, 1);
+
+    setItems(newItems);
+
+    localStorage.setItem('items', JSON.stringify(newItems));
+  };
+
   return (
     <div>
       <h1>Item List</h1>
+
       <AddItem onAddItem={handleAddItem} />
-      <ItemList items={items} />
+
+      <ItemList items={items} onRemoveItem={onRemoveItem} />
+
       <button onClick={handleSelectRandom}>Select Random Item</button>
+
       <RandomItem item={selectedItem} />
     </div>
   );
