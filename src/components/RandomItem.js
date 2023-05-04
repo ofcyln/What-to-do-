@@ -9,7 +9,7 @@ const RandomItem = ({ item }) => {
 
   return (
     <>
-      {item && (
+      {randomItem && (
         <div className="my-4">
           <div className="bg-white rounded-lg shadow-md p-4 my-2">
             <h2 className="font-medium mb-2">Randomly selected item:</h2>
