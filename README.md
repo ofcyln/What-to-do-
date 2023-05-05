@@ -2,7 +2,7 @@
 
 If you are no sure what to do, this app will tell you.
 
-https://what-to-do-99.firebaseapp.com/
+https://what-to-do-99.web.app/
 
 
 Main screen
