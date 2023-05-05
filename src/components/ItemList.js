@@ -9,8 +9,10 @@ const ItemList = ({ items, onRemoveItem }) => {
 
   return (
     <div className="my-4">
-      {itemList.length === 0 && (
-        <p className="text-gray-500">No items added yet</p>
+      {itemList.length < 2 && (
+        <p className="text-red-400 pb-2">
+          No items added yet. Add at least two items to randomly select one.
+        </p>
       )}
 
       {itemList.map((item) => (
@@ -20,7 +22,7 @@ const ItemList = ({ items, onRemoveItem }) => {
         >
           <div>
             <p className="font-medium">{item.text}</p>
-            <p className="text-gray-500">Weight: {item.weight}</p>
+            <p className="text-gray-500">Priority: {item.weight}</p>
           </div>
 
           <button

@@ -52,16 +52,23 @@ const App = () => {
   };
 
   return (
-    <div>
-      <h1>Item List</h1>
+    <div className="p-4 m-4 rounded-md bg-gray-300">
+      <RandomItem item={selectedItem} />
+
+      <h1 className="pb-3 text-4xl text-gray-600">What to do? </h1>
 
       <AddItem onAddItem={handleAddItem} />
 
       <ItemList items={items} onRemoveItem={onRemoveItem} />
 
-      <button onClick={handleSelectRandom}>Select Random Item</button>
-
-      <RandomItem item={selectedItem} />
+      {items.length > 1 ? (
+        <button
+          className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
+          onClick={handleSelectRandom}
+        >
+          Tell me what to do
+        </button>
+      ) : null}
     </div>
   );
 };

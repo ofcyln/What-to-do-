@@ -10,10 +10,9 @@ const RandomItem = ({ item }) => {
   return (
     <>
       {randomItem && (
-        <div className="my-4">
-          <div className="bg-white rounded-lg shadow-md p-4 my-2">
-            <h2 className="font-medium mb-2">Randomly selected item:</h2>
-            <p className="text-lg">{randomItem.text}</p>
+        <div className="flex justify-center">
+          <div className="p-6 mb-2 w-auto bg-green-500 text-white aling-center rounded">
+            <p className="text-4xl">{randomItem.text}</p>
           </div>
         </div>
       )}
