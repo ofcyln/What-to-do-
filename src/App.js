@@ -52,7 +52,7 @@ const App = () => {
   };
 
   return (
-    <div className="p-4 m-4 rounded-md bg-gray-300">
+    <div className="p-4 m-4 rounded-md bg-gray-300 container mx-auto">
       <RandomItem item={selectedItem} />
 
       <h1 className="pb-3 text-4xl text-gray-600">What to do? </h1>

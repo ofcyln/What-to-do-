@@ -1,3 +1,5 @@
-# What-to-do-
+# What-to-do?
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/react-rxm2zj)
+If you are no sure what to do, this app will tell you.
+
+https://what-to-do-99.firebaseapp.com/
